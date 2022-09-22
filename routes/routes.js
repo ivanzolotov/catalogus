@@ -10,6 +10,18 @@ FlowRouter.route('/', {
 FlowRouter.route('/catalog', {
   name: 'routeCatalog',
   action() {
-    BlazeLayout.render('layoutApplication', {regionMain: 'templateCatalog'});
+    BlazeLayout.render('layoutApplication', {
+      regionMain: 'templateCatalog',
+    });
+  }
+});
+
+FlowRouter.route('/test/:slug', {
+  name: 'routeTest',
+  action(params, queryParams) {
+    console.log(params);
+    BlazeLayout.render('layoutApplication', {
+      regionMain: 'templateTest',
+    });
   }
 });

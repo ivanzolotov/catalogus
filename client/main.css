@@ -1,1 +1,18 @@
-/* Project Wide Styles */
+/* Project wide styles */
+
+
+/* Default box-sizing */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* Other defaults */
+
+body {
+  margin: 0;
+}
