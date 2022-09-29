@@ -37,7 +37,7 @@ export const FirmsInitialData = [{
     id: 8,
     name: 'Фирма 8',
     slug: 'firm8',
-    categories: [3],
+    categories: [3, 7],
   }, {
     id: 9,
     name: 'Фирма 9',

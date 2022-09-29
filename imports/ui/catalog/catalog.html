@@ -7,16 +7,11 @@
         {{name}}
       </a>
       <ul>
-        <li class="outline">
-          <a href="/catalog/panda">
-            Панда
-          </a>
-        </li>
-        <li class="outline">
-          <a href="/catalog/franchesko">
-            Франческо Тортини
-          </a>
-        </li>
+        {{#each homepageFirms id}}
+          <li>
+            <a href="/catalog/{{slug}}">{{name}}</a>
+          </li>
+        {{/each}}
       </ul>
     </li>
     {{/each}}

@@ -1,5 +1,6 @@
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import { CategoriesCollection } from '/imports/db/categories';
+import { FirmsCollection } from "/imports/db/firms";
 
 import { SETTINGS } from '/imports/settings/setting';
 
@@ -15,6 +16,12 @@ const homepageCategories = () => {
   return categories;
 };
 
+const homepageFirms = (categoryId) => {
+  const firms = FirmsCollection.find({categories: categoryId}).fetch();
+  return firms;
+}
+
 Template.templateCatalog.helpers({
-  homepageCategories: homepageCategories,
+  homepageCategories,
+  homepageFirms,
 });
